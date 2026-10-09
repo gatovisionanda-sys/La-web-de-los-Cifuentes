@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Isometra&family=Original+Surfer&family=Playwrite+AR:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+html
+{background-color:rgb(183, 232, 255);}
+h1
+{
+    color:rgb(4, 23, 51);
+    font-family: "Isometra", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:50px;
+}
+.foto1
+{
+    height:400px;
+    border: solid 5px #26426d;
+    border-radius: 29px;
+    margin: 0 auto;
+    display: block;
+}
+hr
+{
+    border: 2px solid rgb(38, 66, 109);
+}
+input[type="button"]
+{
+    background-color:rgb(4, 23, 51);
+    color:rgb(157, 219, 229);
+     font-family: "Roboto Condensed", sans-serif;
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+    border-radius: 8px;
+    font-size: 23px;
+    border-color:rgb(157, 219, 229);
+}
+.cabecera
+{
+    color:rgb(4, 23, 51);
+    font-size:30px;
+    border-radius: 8px;
+    font-family: "Isometra", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-color:rgb(157, 219, 229);
+    text-align:center;
+}
+.cabeceraizq
+{
+    color:rgb(4, 23, 51);
+    font-size:30px;
+    border-radius: 8px;
+    font-family: "Isometra", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-color:rgb(157, 219, 229);
+    text-align:left;
+}
+.eslogan
+{
+    color:rgb(38, 66, 109);
+    font-size:20px;
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+    text-align:center;
+}
+.definicion
+{
+    color:rgb(38, 66, 109);
+    font-size:23px;
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+    text-align:left;
+}
+.poemas
+{
+text-align:center;
+  font-family: "Playwrite AR", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color:rgb(4, 23, 51);
+}
