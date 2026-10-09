@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Isometra&family=Original+Surfer&family=Playwrite+AR:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
 
 html
-{background-color:rgb(183, 232, 255);}
+{background-color:#b8e8ff;}
 h1
 {
     color:rgb(4, 23, 51);
@@ -26,14 +26,14 @@ hr
 input[type="button"]
 {
     background-color:rgb(4, 23, 51);
-    color:rgb(157, 219, 229);
+    color:#b8e8ff;;
      font-family: "Roboto Condensed", sans-serif;
   font-family: "Original Surfer", sans-serif;
   font-weight: 600;
   font-style: normal;
     border-radius: 8px;
     font-size: 23px;
-    border-color:rgb(157, 219, 229);
+    border-color:#b8e8ff;;
 }
 .cabecera
 {
@@ -59,8 +59,8 @@ input[type="button"]
 }
 .eslogan
 {
-    color:rgb(38, 66, 109);
-    font-size:20px;
+    color:rgb(4, 23, 51);
+    font-size:25px;
   font-family: "Original Surfer", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -84,3 +84,24 @@ text-align:center;
   font-style: normal;
   color:rgb(4, 23, 51);
 }
+input[type="text"]
+{
+    color:rgb(38, 66, 109);
+     font-family: "Roboto Condensed", sans-serif;
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+    border-radius: 8px;
+    font-size: 23px;
+    border-color:rgb(4, 23, 51);
+}
+.seccion-central {
+    padding: 50px 20px;
+    background-size: cover;       
+    background-position: center;   
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(230, 242, 255, 0.55), rgba(230, 242, 255, 0.55)), url('../imagenes/fondo.jpg');
+}
+
+
+
