@@ -100,7 +100,7 @@ input[type="text"]
     background-size: cover;       
     background-position: center;   
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(230, 242, 255, 0.55), rgba(230, 242, 255, 0.55)), url('../imagenes/fondo.jpg');
+    background-image: linear-gradient(rgba(230, 242, 255, 0.55), rgba(230, 242, 255, 0.55)), url('../imagenes/fondo.jpg'); 
 }
 #avisos
 {
