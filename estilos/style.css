@@ -19,6 +19,14 @@ h1
     margin: 0 auto;
     display: block;
 }
+.foto2
+{
+    height:200px;
+    border: solid 5px #26426d;
+    border-radius: 29px;
+    margin: 0 auto;
+    display: block;
+}
 hr
 {
     border: 2px solid rgb(38, 66, 109);
@@ -105,5 +113,12 @@ input[type="text"]
 
 .formulario
 {    margin: 0 auto;
+    display: block;
+}
+.video
+{
+    border: solid 5px #26426d;
+    border-radius: 30px;
+    margin: 0 auto;
     display: block;
 }
