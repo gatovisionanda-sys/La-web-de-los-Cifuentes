@@ -133,3 +133,28 @@ font-family: "Yarndings 12", system-ui;
   text-align: center;
   color:rgb(4, 23, 51);
 }
+#diccionario
+{
+    border: double 12px #26426d;
+    margin: 0 auto;
+    display: block;
+}
+#topsecret:hover
+{
+    font-size: 45px;
+}
+#btnsecreto
+{
+    background-color:rgb(4, 23, 51);
+    color:#00ff40;
+     font-family: "Roboto Condensed", sans-serif;
+    font-family: "Original Surfer", sans-serif;
+    font-weight: 600;
+  font-style: normal;
+    border-radius: 8px;
+    font-size: 23px;
+    border-color:#b8e8ff;
+    text-align:center;
+    display:block;
+    margin: auto;
+}

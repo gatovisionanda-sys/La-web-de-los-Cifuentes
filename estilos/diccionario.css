@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Isometra&family=Original+Surfer&family=Playwrite+AR:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Yarndings+12&display=swap');
+
+html
+{background-color: antiquewhite;}
+h1
+{
+    color: black;
+    font-family: "Isometra", serif;
+    font-weight: 400; 
+    font-style: normal;
+    font-size:50px;
+}
+.cabecera
+{
+    color:rgb(0, 0, 0);
+    font-size:30px;
+    border-radius: 8px;
+    font-family: "Isometra", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-color:rgb(157, 219, 229);
+    text-align:center;
+}
+li
+{
+    color: black;
+    font-family: "Isometra", serif;
+    font-weight: 400; 
+    font-style: normal;
+    font-size:20px;
+}
+.cabecera3
+{
+    color:rgb(0, 0, 0);
+    font-size:20px;
+    border-radius: 8px;
+    font-family: "Isometra", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-color:rgb(157, 219, 229);
+    text-align:center;
+}
+hr
+{
+    border: 3px solid rgb(0, 0, 0);
+}
+.entradilla
+{
+    color:rgb(0, 0, 0);
+    font-size:25px;
+    border-radius: 8px;
+    font-family: "Isometra", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-color:rgb(157, 219, 229);
+    text-align:left;
+}
+.desc
+{
+    color:rgb(0, 0, 0);
+    font-size: 18px;
+    border-radius: 8px;
+    font-family: sans-serif;
+    text-align: left;
+}

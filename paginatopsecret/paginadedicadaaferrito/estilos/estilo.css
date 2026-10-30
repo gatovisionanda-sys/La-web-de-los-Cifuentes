@@ -1,0 +1,72 @@
+html
+{
+	font-family: verdana;
+}
+div
+{
+	padding: 2px;
+}
+#grande
+{
+	background-color: lightblue;
+	height: 1200px;
+}
+#menutop
+{
+	background-color: yellow;
+	text-align: center;
+	height: 25px;
+}
+#lateral
+{
+	background-color: orange;
+	width: 260px;
+	padding-left: 25px;
+	float: left;
+	height: 1167px;
+}
+a:hover, #imagenlat:hover
+{
+	font-size: 23px;
+	width: 210px;
+}
+#imagenlat
+{
+	width: 180px;
+}
+#imagenlat:hover
+{
+	rotate: 180deg;
+}
+h1
+{
+	color: white;
+}
+h2
+{
+	color: purple;
+}
+.contenido
+{
+	color: white;
+	border: salmon solid;
+	border-radius: 12px;
+	margin-left: 290px;
+	font-size: 20px;
+}
+.gato
+{
+	width: 200px;
+	float: right;
+	margin-right: 300px;
+}
+.gato:hover
+{
+	rotate: 15deg;
+}
+#pie
+{
+	background-color: black;
+	color: green;
+	text-align: center;
+}
