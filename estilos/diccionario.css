@@ -48,13 +48,27 @@ hr
 .entradilla
 {
     color:rgb(0, 0, 0);
-    font-size:25px;
+    font-size:20px;
     border-radius: 8px;
     font-family: "Isometra", serif;
     font-weight: 400;
     font-style: normal;
     border-color:rgb(157, 219, 229);
     text-align:left;
+}
+#indice
+{
+    color:rgb(0, 0, 0);
+    font-size:16px;
+    border-radius: 8px;
+    font-family: "Isometra", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-color:rgb(157, 219, 229);
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 .desc
 {
@@ -63,4 +77,41 @@ hr
     border-radius: 8px;
     font-family: sans-serif;
     text-align: left;
+    padding-right: 40px;
+}
+.boton
+{
+    background-color:rgb(0, 0, 0);
+    color:antiquewhite;
+     font-family: "Roboto Condensed", sans-serif;
+    font-family: "Original Surfer", sans-serif;
+    font-weight: 600;
+  font-style: normal;
+    border-radius: 8px;
+    font-size: 20px;
+    border-color:antiquewhite;
+}
+.botonletra
+{
+    background-color:rgb(0, 0, 0);
+    color:antiquewhite;
+     font-family: "Roboto Condensed", sans-serif;
+    font-family: "Original Surfer", sans-serif;
+    font-weight: 600;
+  font-style: normal;
+    border-radius: 8px;
+    font-size: 23px;
+    border-color:antiquewhite;
+    padding: 12px;
+}
+.letrita
+{
+    color:rgb(0, 0, 0);
+    font-size: 30px;
+    border-radius: 8px;
+    font-family: "Isometra", serif;
+    font-weight: 400; 
+    font-style: normal;
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
