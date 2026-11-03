@@ -3,6 +3,20 @@
 
 html
 {background-color:#b8e8ff;}
+#webver
+{
+    font-family: verdana;
+    color: rgb(4, 23, 51);
+    text-align:right
+}
+#marquesina
+{
+    font-family: "Orbitron", sans-serif;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: rgb(4, 23, 51);
+}
 h1
 {
     color:rgb(4, 23, 51);
@@ -31,7 +45,11 @@ hr
 {
     border: 2px solid rgb(38, 66, 109);
 }
-input[type="button"]
+a
+{
+    text-decoration: none;
+}
+input[type="button"], button
 {
     background-color:rgb(4, 23, 51);
     color:#b8e8ff;
