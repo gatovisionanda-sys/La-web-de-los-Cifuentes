@@ -33,6 +33,10 @@ h1
     margin: 0 auto;
     display: block;
 }
+#fotozoom:hover
+ {
+    border: solid #5297ff 7px;
+ }
 .foto2
 {
     height:200px;
@@ -40,6 +44,7 @@ h1
     border-radius: 29px;
     margin: 0 auto;
     display: block;
+    background-color: rgb(253, 250, 247);
 }
 hr
 {
@@ -91,6 +96,9 @@ input[type="button"], button
   font-weight: 600;
   font-style: normal;
     text-align:center;
+    width: 36%;
+    margin: auto;
+    margin-bottom: 15px;
 }
 .definicion
 {
@@ -130,7 +138,8 @@ input[type="text"]
 }
 
 .formulario
-{    margin: 0 auto;
+{   
+    margin: 0 auto;
     display: block;
 }
 .video

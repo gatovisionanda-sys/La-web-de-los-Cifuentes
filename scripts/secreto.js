@@ -1,9 +1,9 @@
-function ari() {
+function adrianasaltee() {
     const topSecretElement = document.getElementById('topsecret');
     
     if (topSecretElement) {
         topSecretElement.addEventListener('click', function() {
-            // Evitamos duplicados comprobando si el botón ya fue creado
+
             if (!document.getElementById('btnsecreto')) {
                 const nuevoBoton = document.createElement('button');
                 nuevoBoton.id = 'btnsecreto';
@@ -21,4 +21,4 @@ function ari() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', ari);
+document.addEventListener('DOMContentLoaded', adrianasaltee);
