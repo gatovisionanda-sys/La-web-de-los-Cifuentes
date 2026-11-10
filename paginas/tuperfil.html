@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<html>
+  <head>
+    <title>Los Cifuentes</title>
+      <link rel="stylesheet" href="../estilos/estilo.css">
+      <link rel="icon" type="image/png" href="../favicon.png">
+      <script src="../scripts/proteger.js"></script>
+        <meta charset="UTF-8">
+    <script src="../recursos/fotosdeperfiles.js"></script>
+          <script>
+        let meloinvento = localStorage.getItem("tunombre");
+
+        if (meloinvento && meloinvento !== "null" && meloinvento.trim() !== "") {
+            document.getElementById("bienvenido").innerHTML = "Bienvenido " + meloinvento;
+        } else {
+            // Si no hay nombre válido, limpiamos el elemento y aseguramos que se borre del localStorage
+            document.getElementById("perfil")?.remove();
+            localStorage.removeItem("tunombre");
+        }
+        </script>
+  </head>
+  <body>
+    <h1>Perfil de usuario</h1>
+        <a href="../index.html">
+            <button class="boton">Guardar y volver a inicio</button>
+        </a>
+    <hr>
+    
+             <section id="perfil-page">
+            <p id="nombre-de-perfil-page">Tu nombre</p>
+            <button class="boton" style="display:block; margin: auto; margin-bottom: 0px;" onclick="camnombre()">Editar nombre</button>
+            <br>
+            <img id="foto-de-perfil-page" src="../recursos/fotos-de-perfil/editar.png">
+          </section>
+<br>
+            <div class="botones-perfil">
+            <h2 class="eslogan">Cambiar foto</h2>
+            <button style="font-size: 40px;" class="boton" onclick="restar()">⬅</button>
+            <button style="font-size: 40px;" class="boton" onclick="sumar()">➡</button>
+            <br><br>
+            <button style="font-size: 23px;" class="boton" onclick="fotourl()">Con URL</button>
+            </div>
+
+      <script src="../scripts/excelentisimoadmin.js"></script>
+      <script>
+            if (localStorage.getItem("tufoto"))
+            {
+            document.getElementById("foto-de-perfil-page").src = localStorage.getItem("fotopuesta")
+            }
+            else
+            {
+              if (localStorage.getItem("fotourl"))
+              {
+                document.getElementById("foto-de-perfil-page").src = localStorage.getItem("fotopuesta");
+              }
+            }
+            if (localStorage.getItem("tunombre"))
+            {
+            document.getElementById("nombre-de-perfil-page").innerHTML = localStorage.getItem("tunombre");
+            }
+      </script>
+
+  </body>
+
+</html>

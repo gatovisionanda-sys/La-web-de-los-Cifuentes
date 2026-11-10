@@ -5,7 +5,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Creamos un contenedor o inyectamos directamente el HTML al principio del body
     let menuHTML = `
-        <h1>LOS CIFUENTES</h1>
+    
+      <div>
+        <h1>LOS CIFUENTES
+          <section id="perfil-top">
+          <a href="../paginas/tuperfil.html">
+            <p id="nombre-de-perfil">Tu perfil</p>
+            <img id="foto-de-perfil" src="../recursos/fotos-de-perfil/editar.png">
+        </a>
+        
+          </section>
+        </h1>
+
         <a href="${rutaBase}index.html">
             <button class="boton">Inicio</button>
         </a>
@@ -29,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </a>
             <button class="boton" id="pozu">a</button>
         <hr>
+    </div>
     `;
 
     // Insertamos todo el bloque al comienzo del body

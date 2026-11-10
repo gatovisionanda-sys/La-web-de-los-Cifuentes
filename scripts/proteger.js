@@ -16,6 +16,14 @@ if (autorizado !== "true") {
 
     if (contra === clave) {
         localStorage.setItem("sesion_iniciada", "true");
+        if (localStorage.getItem("tunombre"))
+        {
+            console.log("yata")
+        }
+        else
+        {
+        let nombre = prompt("¿Como te llamas?");
+        localStorage.setItem("tunombre", nombre);
+        }
     }
 }
-

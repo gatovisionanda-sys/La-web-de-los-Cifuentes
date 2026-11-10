@@ -217,3 +217,68 @@ font-family: "Yarndings 12", system-ui;
     font-weight: 600;
   font-style: normal;
 }
+#foto-de-perfil
+{
+    width: 85px;
+    height: 85px;
+    border-radius: 100%;
+    float: right;
+    border: solid rgb(4, 23, 51);
+    padding: 2px;
+}
+#foto-de-perfil:hover
+{
+    padding: 4px;
+}
+#nombre-de-perfil
+{
+        color:rgb(4, 23, 51);
+    font-size: 27px;
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+    text-align:right;
+    margin-bottom: 15px;
+    float: left;
+    margin-right: 15px;
+}
+#perfil-top
+{
+    float: right;
+    margin-right: 13px;
+}
+#foto-de-perfil-page
+{
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    border: solid rgb(4, 23, 51) 4px;
+    padding: 2px;
+    display: block;
+    margin: auto;
+}
+
+#nombre-de-perfil-page
+{
+        color:rgb(4, 23, 51);
+    font-size: 50px;
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+    text-align:center;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    margin-top: 0px;
+}
+#perfil-page
+{
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+.botones-perfil
+{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
