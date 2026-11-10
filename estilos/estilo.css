@@ -54,7 +54,7 @@ a
 {
     text-decoration: none;
 }
-input[type="button"], button
+.boton, input[type="button"]
 {
     background-color:rgb(4, 23, 51);
     color:#b8e8ff;
@@ -187,4 +187,33 @@ font-family: "Yarndings 12", system-ui;
     text-align:center;
     display:block;
     margin: auto;
+}
+#adminpanel
+{
+    background-color: rgb(4, 23, 51);
+    padding: 10px;
+    color: rgb(229, 142, 255);
+}
+.botonadmin
+{
+    background-color:rgb(0, 0, 0);
+     font-family: "Roboto Condensed", sans-serif;
+    font-family: "Original Surfer", sans-serif;
+    font-weight: 600;
+  font-style: normal;
+    border-radius: 8px;
+    font-size: 20px;
+    border-color:rgb(229, 142, 255);
+    color: rgb(229, 142, 255);
+}
+#textadmin
+{
+    text-align: right;
+    float: right;
+    font-size: 23px;
+    margin: 10px;
+         font-family: "Roboto Condensed", sans-serif;
+    font-family: "Original Surfer", sans-serif;
+    font-weight: 600;
+  font-style: normal;
 }
