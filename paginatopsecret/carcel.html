@@ -6,10 +6,20 @@
 <script src="../scripts/memeo.js"></script>
 </head>
 <body>
-<h1>Porfavor identifiquese</h1>
+<h1 id="terco">Ya las cagao</h1>
 <br>
 
-<p>El gobierno cifuentes irá por usted para su inminente eliminación, ZAMARRO.</p>
+<p id="pk">El gobierno cifuentes irá por usted para su inminente eliminación, ZAMARRO.</p>
+<img id="fotito" src="https://media.tenor.com/m8I7MzOZmjIAAAAM/alert-cat-alerta.gif">
+
+<script>
+ if (localStorage.getItem("sinverguenza") === "lo-eres")
+ {
+    document.getElementById("pk").innerHTML = "No aprendes, vas a acabar peor que carrero blanco";
+    document.getElementById("terco").innerHTML = "Teeeeerco";
+    document.getElementById("fotito").src = "https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84b35425fce9eb875393f6876a";
+ }
+</script>
 
 </body>
 </html>

@@ -1,14 +1,18 @@
-let payo = localStorage.getItem("puepasar");
+payo = localStorage.getItem("puepasar");
 
-if (payo === "false") {
-    window.location.replace("../paginatopsecret/carcel.html");
+function espia()
+{
+    if (localStorage.getItem("puepasar") === "false")
+    {
+        localStorage.setItem("sinverguenza" , "lo-eres");
+    }
+        else
+        {
+        localStorage.setItem("puepasar", "false");
+        }
 }
-
-function espia() {
-    localStorage.setItem("puepasar", "false");
-    window.location.replace("../paginatopsecret/carcel.html");
-}
-
-function perdon() {
-    localStorage.setItem("puepasar", "true");
+function perdon()
+{
+    localStorage.removeItem("puepasar");
+    localStorage.removeItem("sinverguenza");
 }

@@ -6,14 +6,26 @@
 <script src="../scripts/memeo.js"></script>
 </head>
 <body>
-<h1>Porfavor identifiquese</h1>
+<h1 id="tania">Porfavor identifiquese</h1>
 <br>
 
-<p>¿Es usted un espía del charismo o de la oposición?</p>
+<p id="pregun">¿Es usted un espía del charismo o de la oposición?</p>
 <br>
-<button onclick="espia()">Si, lo soy</button>
+<a href="carcel.html"><button  id="sisoy" onclick="espia()">Si, lo soy</button></a>
 <br>
-<button>Pos que va</button>
+<a href="xd.html" id="mevoy"><button id="nosoy" onclick="perdon()">Pos que va</button></a>
+
+<script>
+
+if (localStorage.getItem("puepasar") === "false")
+{
+    document.getElementById("pregun").innerHTML = "Usted ha sido identificado anteriormente como espía, ¿se disculpa?";
+    document.getElementById("sisoy").innerHTML = "No me arrepiento de naaaa";
+    document.getElementById("nosoy").innerHTML = "Pido disculpas";
+    document.getElementById("tania").innerHTML = "Hola de nuevo, zamarruzo";
+
+}
+</script>
 
 </body>
 </html>

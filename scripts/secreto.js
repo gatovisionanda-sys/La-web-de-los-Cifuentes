@@ -12,7 +12,7 @@ function adrianasaltee() {
                 nuevoBoton.style.marginTop = '10px';
                 
                 nuevoBoton.addEventListener('click', function() {
-                    window.location.href = 'paginatopsecret/xd.html';
+                    window.location.href = 'paginatopsecret/identifiquese.html';
                 });
                 
                 topSecretElement.after(nuevoBoton);
