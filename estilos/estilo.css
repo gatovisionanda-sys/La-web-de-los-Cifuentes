@@ -282,3 +282,204 @@ font-family: "Yarndings 12", system-ui;
     margin: auto;
     text-align: center;
 }
+
+/* CHATGPT: El separador del perfil no altera el encabezado de escritorio. */
+.perfil-separador-responsive
+{
+display: none; 
+}
+
+/* CHATGPT: Ajustes responsive generales. Solo se activan en pantallas de hasta 768 px; los estilos de escritorio originales se mantienen. */
+@media screen and (max-width: 768px) {
+    /* CHATGPT: Evita desbordamientos laterales y adapta el espacio general al ancho del teléfono. */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    body { margin: 0; padding: 12px; }
+
+    /* CHATGPT: Escala los títulos sin cambiar su tipografía ni su identidad visual. */
+    h1 { font-size: clamp(1.75rem, 7vw, 2.35rem); overflow-wrap: anywhere; }
+    .cabecera, .cabeceraizq { font-size: clamp(1.25rem, 5vw, 1.7rem); overflow-wrap: anywhere; }
+
+    /* CHATGPT: Hace que las imágenes mantengan su proporción y no superen la pantalla. */
+    img { max-width: 100%; height: auto; }
+    .foto1 {
+        width: min(100%, 520px);
+        height: auto;
+        max-height: 65vh;
+        object-fit: contain;
+        border-width: 3px;
+        border-radius: 18px;
+    }
+    .foto2 {
+        width: auto;
+        height: auto;
+        max-width: min(100%, 420px);
+        max-height: 200px;
+        object-fit: contain;
+        border-width: 3px;
+        border-radius: 18px;
+    }
+
+    /* CHATGPT: Reduce las medidas fijas de texto y permite que los botones se ajusten en varias líneas. */
+    .eslogan {
+        width: 100%;
+        max-width: 620px;
+        padding: 0 4px;
+        font-size: clamp(1.05rem, 4.2vw, 1.35rem);
+        overflow-wrap: anywhere;
+    }
+    .definicion { font-size: clamp(1.05rem, 4.2vw, 1.35rem); }
+    .boton, input[type="button"], button {
+        max-width: 100%;
+        min-height: 44px;
+        padding: 0.55em 0.75em;
+        font-size: clamp(1rem, 4vw, 1.25rem);
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+    input[type="text"] {
+        width: 100%;
+        max-width: 480px;
+        min-height: 44px;
+        padding: 9px 10px;
+        font-size: 16px;
+    }
+
+    /* CHATGPT: Compacta la sección central sin eliminar el fondo ni modificar su composición. */
+    .seccion-central { padding: 28px 12px; }
+    .deco {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(1.9rem, 8.5vw, 2.6rem);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+        direction: ltr;
+        text-align: center;
+    }
+    #marquesina { font-size: clamp(0.78rem, 3.2vw, 1rem); }
+    #webver { font-size: 0.8rem; overflow-wrap: anywhere; }
+
+    /* CHATGPT: Conserva la proporción del reproductor y lo limita al ancho disponible. */
+    .video {
+        display: block;
+        width: min(100%, 560px);
+        height: min(calc(56.25vw - 13.5px), 315px);
+        min-height: 160px;
+        margin: 0 auto;
+        border-width: 3px;
+        border-radius: 18px;
+    }
+    .poemas {
+        max-width: 100%;
+        padding: 0 4px;
+        font-size: clamp(0.78rem, 3.2vw, 0.95rem);
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
+
+    /* CHATGPT: Reordena el diccionario en una columna para que sus dos paneles sean utilizables en móvil. */
+    #diccionario {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 8px;
+        border-width: 5px;
+    }
+    #diccionario iframe {
+        display: block;
+        float: none !important;
+        width: 100% !important;
+        height: 52vh !important;
+        min-height: 320px;
+        max-width: 100%;
+        border: 0;
+    }
+
+    /* CHATGPT: Muestra una línea entre el título del sitio y el perfil solo cuando se activa el diseño móvil. */
+    #perfil-top .perfil-separador-responsive {
+        display: block;
+        width: 100%;
+        margin: 5px auto 9px;
+        border: 2px solid rgb(38, 66, 109);
+        border-top: 2px solid rgb(38, 66, 109);
+    }
+
+    /* CHATGPT: Mantiene el bloque del perfil centrado y reserva una disposición estable para nombre y fotografía. */
+    #perfil-top {
+        float: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin: 8px auto;
+    }
+    /* CHATGPT: El enlace también usa una columna de ancho completo para que el nombre no pueda empujar lateralmente la fotografía. */
+    #perfil-top > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 4px;
+        width: 100%;
+        max-width: 100%;
+    }
+    /* CHATGPT: Mantiene el nombre en una sola línea y reserva siempre el mismo alto; los nombres excepcionalmente largos muestran puntos suspensivos en móvil. */
+    /* CHATGPT: Aumenta un poco el nombre del perfil en móvil; para deshacerlo, restaurar clamp(0.9rem, 4.5vw, 1.5rem). */
+    #nombre-de-perfil {
+        display: block;
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        min-height: 1.2em;
+        margin: 0;
+        padding: 0 4px;
+        box-sizing: border-box;
+        font-size: clamp(1rem, 5vw, 1.6rem);
+        line-height: 1.2;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    /* CHATGPT: Aumenta ligeramente el perfil en móvil. Si se quiere volver al tamaño anterior, cambiar 72px por 64px en estas cinco propiedades. */
+    #foto-de-perfil {
+        display: block;
+        float: none;
+        flex: 0 0 78px;
+        width: 78px;
+        min-width: 78px;
+        height: 78px;
+        min-height: 78px;
+        margin: 0;
+        padding: 2px;
+        object-fit: cover;
+    }
+    #perfil-page { width: 100%; }
+    #nombre-de-perfil-page {
+        margin: 0 0 12px;
+        font-size: clamp(1.7rem, 7vw, 2.5rem);
+        overflow-wrap: anywhere;
+    }
+    #foto-de-perfil-page {
+        width: min(68vw, 280px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+    #textadmin { float: none; text-align: center; font-size: 1rem; }
+    #adminpanel { max-width: 100%; overflow-wrap: anywhere; }
+    .botones-perfil { max-width: 100%; }
+    .botones-perfil .eslogan { width: 100%; }
+
+    /* CHATGPT: Evita que formularios e iframes externos generen desplazamiento horizontal. */
+    form { max-width: 100%; }
+    .formulario { width: 100%; max-width: 100%; }
+    iframe { max-width: 100%; }
+}
+

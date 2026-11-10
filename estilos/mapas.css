@@ -117,3 +117,45 @@ font-family: "Yarndings 12", system-ui;
     height: 1000px;
     padding: 2%;
 }
+
+/* CHATGPT: Adaptación móvil de la sección de mapas sin alterar sus colores ni su estilo visual. */
+@media screen and (max-width: 768px) {
+    /* CHATGPT: Evita el desbordamiento y adapta el espacio de la página. */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    body { margin: 0; padding: 12px; }
+
+    /* CHATGPT: Ajusta títulos, textos e imágenes manteniendo proporciones y tipografías. */
+    h1 { font-size: clamp(1.7rem, 7vw, 2.3rem); }
+    .cabecera, .cabeceraizq { font-size: clamp(1.2rem, 5vw, 1.65rem); }
+    .eslogan { width: 100%; max-width: 620px; padding: 0 4px; font-size: clamp(1.05rem, 4.2vw, 1.35rem); }
+    .deco { max-width: 100%; font-size: clamp(1.4rem, 6vw, 2rem); overflow-wrap: anywhere; }
+    img { max-width: 100%; height: auto; }
+    .foto1, .foto2 {
+        width: auto;
+        height: auto;
+        max-width: min(100%, 520px);
+        max-height: 65vh;
+        object-fit: contain;
+        border-width: 3px;
+        border-radius: 18px;
+    }
+    input[type="button"], button {
+        max-width: 100%;
+        min-height: 44px;
+        padding: 9px 12px;
+        font-size: clamp(1rem, 4vw, 1.2rem);
+        white-space: normal;
+    }
+
+    /* CHATGPT: Sustituye la altura fija del bloque cartográfico por una altura flexible. */
+    .bloqueblanco {
+        width: 100%;
+        height: auto;
+        min-height: 65vh;
+        padding: 5%;
+        border-radius: 16px;
+        overflow-wrap: anywhere;
+    }
+}
+

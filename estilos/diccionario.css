@@ -122,3 +122,54 @@ hr
     margin-left: auto;
     margin-right: auto;
 }
+
+/* CHATGPT: Adaptación móvil del diccionario. Las reglas originales siguen controlando la apariencia en escritorio. */
+@media screen and (max-width: 768px) {
+    /* CHATGPT: Ajusta el lienzo y el espacio exterior a la anchura del teléfono. */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+    body { margin: 0; padding: 10px; }
+
+    /* CHATGPT: Reduce títulos y entradillas de forma proporcional, manteniendo las fuentes originales. */
+    h1 { font-size: clamp(1.7rem, 7vw, 2.3rem); overflow-wrap: anywhere; }
+    .cabecera, .cabecera3 { font-size: clamp(1.2rem, 5vw, 1.65rem); }
+    .entradilla { font-size: clamp(1.1rem, 4.6vw, 1.4rem); overflow-wrap: anywhere; }
+    li { font-size: clamp(1rem, 4vw, 1.15rem); }
+    .letrita { margin-left: 6px; font-size: clamp(1.5rem, 6vw, 1.9rem); }
+
+    /* CHATGPT: Aprovecha el ancho disponible para el índice y evita que los textos largos se salgan. */
+    #indice { width: 100%; max-width: 100%; padding: 0 8px; font-size: 0.95rem; }
+    .desc {
+        max-width: 100%;
+        padding-right: 0;
+        font-size: clamp(1rem, 4vw, 1.15rem);
+        overflow-wrap: anywhere;
+    }
+    #cifu { width: min(95%, 320px); height: auto; }
+
+    /* CHATGPT: Hace los botones más fáciles de pulsar y permite que la navegación salte de línea. */
+    .boton, .botonletra {
+        max-width: 100%;
+        min-height: 44px;
+        padding: 9px 11px;
+        font-size: 1rem;
+        white-space: normal;
+    }
+    .botonletra { min-width: 42px; font-size: 1.1rem; }
+    div[style*="padding: 20px"] { padding: 12px !important; }
+    div[style*="padding-left: 40px"] {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        margin-bottom: 60px !important;
+    }
+    div[style*="display: flex"] {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+    div[style*="display: flex"] a { flex: 1 1 auto; text-align: center; }
+    div[style*="display: flex"] .boton { width: 100%; }
+    hr { max-width: 100%; }
+}
+

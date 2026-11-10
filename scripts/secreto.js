@@ -10,13 +10,15 @@ function adrianasaltee() {
                 nuevoBoton.textContent = 'Acceder a pagina supersecreta';
                 nuevoBoton.style.display = 'block';
                 nuevoBoton.style.marginTop = '10px';
-                
+                nuevoBoton.style.marginBottom = '20px';
                 nuevoBoton.addEventListener('click', function() {
                     window.location.href = 'paginatopsecret/identifiquese.html';
                 });
                 
                 topSecretElement.after(nuevoBoton);
+                document.getElementById("topsecret").remove();
             }
+            
         });
     }
 }

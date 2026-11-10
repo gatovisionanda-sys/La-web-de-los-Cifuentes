@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
       <div>
         <h1>LOS CIFUENTES
           <section id="perfil-top">
+          <!-- CHATGPT: Separador adicional visible únicamente en móvil, entre el título principal y el bloque de perfil. -->
+          <hr class="perfil-separador-responsive">
           <a href="../paginas/tuperfil.html">
             <p id="nombre-de-perfil">Tu perfil</p>
             <img id="foto-de-perfil" src="../recursos/fotos-de-perfil/editar.png">
