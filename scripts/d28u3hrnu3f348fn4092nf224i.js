@@ -1,7 +1,7 @@
 let autorizado = localStorage.getItem("sesion_iniciada");
 
-clave="as";
-admin="fer"
+clave="zamarrete123";
+admin="ferreteadmin"
 
 if (autorizado !== "true") {
     let contra = prompt("Muchacho tamien pon la contraseña:");
