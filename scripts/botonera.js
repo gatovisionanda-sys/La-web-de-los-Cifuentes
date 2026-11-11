@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <button class="boton" id="boton-menu" onclick="ocultar()">☰</button>
 
         <a href="${rutaBase}index.html">
-            <button class="boton">🏠︎ Inicio</button>
+            <button class="boton">Inicio</button>
         </a>
         
         <span id="menu-opt">
@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", function() {
             <button class="boton" style="color:rgb(255, 0, 0)">⦿ Himno 24/7</button>
         </a>
         <a href="${rutaBase}paginas/partido.html">
-            <button class="boton" style="color:rgb(255, 188, 19)">✎ Registrar Partido</button>
+            <button class="boton" style="color:rgb(255, 188, 19)">Registrar Partido</button>
         </a>
         <a href="${rutaBase}paginas/diccionario.html">
-            <button class="boton">🕮 Diccionario C.I.F.U.</button>
+            <button class="boton">Diccionario C.I.F.U.</button>
         </a>
         <a href="${rutaBase}paginas/carpeta-ciudadana">
-            <button class="boton">🗁 Carpeta ciudadana</button>
+            <button class="boton">Carpeta ciudadana</button>
         </a>
         </span>
             <button class="boton" id="pozu">a</button>
@@ -53,10 +53,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (zamarrete) {
         if (putita === "true") {
-            zamarrete.innerHTML = "⏻ Cerrar sesión";
+            zamarrete.innerHTML = "Cerrar sesión";
             zamarrete.onclick = cerrarSesion;
         } else {
-            zamarrete.innerHTML = "⏻ Iniciar sesion";
+            zamarrete.innerHTML = "Iniciar sesion";
             zamarrete.onclick = iniciarDesdePagina;
             zamarrete.style.color = "lime";
         }
@@ -72,7 +72,7 @@ function ocultar() {
 
     if (ver === "ocultar") {
         document.getElementById("menu-opt").style.display = "inline";
-        document.getElementById("boton-menu").innerHTML = "✖";
+        document.getElementById("boton-menu").innerHTML = "X";
         cam("menu", "mostrar");
     } else if (ver === "mostrar") {
         document.getElementById("menu-opt").style.display = "none";

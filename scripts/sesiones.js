@@ -16,6 +16,10 @@ if (!localStorage.getItem("tunombre") || localStorage.getItem("tunombre") === "n
     document.getElementById("tu-elemento-id")?.remove();
 }
 
+if (!localStorage.getItem("biografia") || localStorage.getItem("biografia") === "null" || localStorage.getItem("biografia").trim() === "") {
+    localStorage.removeItem("biografia");
+}
+
 function iniciarDesdePagina()
 {
     window.location.href = rutaBase+"paginas/dfjknhyu8u45i3rokef904u93i4oefuhu19i04o32ru3uf9i2o3uqthu43jiru1h839u2oithug34q92i2t4ini1o9u4t.html";

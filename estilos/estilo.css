@@ -255,17 +255,27 @@ font-family: "Yarndings 12", system-ui;
     float: right;
     margin-right: 13px;
 }
-#foto-de-perfil-page
-{
-    width: 350px;
-    height: 350px;
-    border-radius: 100%;
+#foto-de-perfil-page {
+    width: 28%;
+    height: auto;
     border: solid rgb(4, 23, 51) 4px;
     padding: 2px;
     display: block;
-    margin: auto;
+    flex-shrink: 0;
+    margin-left: 2.65%;
 }
-
+#biografia-page {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    font-size: 23px;
+    color: black;
+    font-family: "Original Surfer", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
 #nombre-de-perfil-page
 {
         color:rgb(4, 23, 51);
@@ -274,21 +284,50 @@ font-family: "Yarndings 12", system-ui;
   font-weight: 500;
   font-style: normal;
     text-align:center;
-    margin-bottom: 15px;
-    margin-right: 15px;
-    margin-top: 0px;
+    margin-left: 5%;
+    margin-top: 4%;
+    display: inline;
 }
 #perfil-page
 {
-    width: 60%;
-    display: block;
+    width: 30%;
+    padding-top: 2%;
     margin: auto;
+    border: solid 2px rgb(49, 71, 7);
+    border-radius: 30px;
+    background-image: url('../recursos/fondos/dni.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 350px;
+    height: auto;
+    box-sizing: border-box;
+}
+#contenido-perfil-page {
+    display: flex;
+    align-items: flex-start;
+    gap: 3%;
+    width: 94%;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+#numerin
+{
+    margin-left: 3%;
+    margin-top: 7%;
+    font-size: 110%;
 }
 .botones-perfil
 {
+    width: 290px;
     display: block;
     margin: auto;
+    margin-top: 10px;
     text-align: center;
+    border: solid 3px rgb(4, 23, 51);
+    border-radius: 20px;
+    padding: 10px;
 }
 
 /* CHATGPT: El separador del perfil no altera el encabezado de escritorio. */
@@ -347,8 +386,7 @@ display: none;
     .boton, input[type="button"], button {
         max-width: 100%;
         min-height: 44px;
-        padding: 0.55em 0.75em;
-        font-size: clamp(1rem, 4vw, 1.25rem);
+        font-size: clamp(1.2rem, 4vw, 1.25rem);
         white-space: normal;
         overflow-wrap: anywhere;
     }
@@ -501,6 +539,13 @@ display: none;
         aspect-ratio: 1 / 1;
         object-fit: cover;
     }
+    #boton-menu
+    {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+
     #textadmin { display: none !important; }
     .botonadmin { font-size: clamp(0.3rem, 3vw, 0.75rem);}
     #adminpanel { max-width: 100%; overflow-wrap: anywhere; }
@@ -513,3 +558,91 @@ display: none;
     iframe { max-width: 100%; }
 }
 
+/* ======================================================
+   CERTIFICADO DIGITAL EN MÓVIL
+   Conserva la composición horizontal de escritorio.
+   Solo reduce proporcionalmente medidas y espacios.
+   ====================================================== */
+@media screen and (max-width: 768px) {
+    #perfil-page {
+        width: 100%;
+        max-width: 100%;
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 1.91 / 1;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        background-attachment: scroll;
+        border-radius: 17px;
+    }
+
+    /* El nombre sigue arriba, como en el DNI de escritorio. */
+    #nombre-de-perfil-page {
+        display: block;
+        width: auto;
+        margin-left: 5%;
+        margin-top: 2%;
+        margin-bottom: 0;
+        font-size: clamp(21px, 6.2vw, 42px);
+        line-height: 1.05;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+
+    /* Foto y biografía permanecen una al lado de la otra. */
+    #contenido-perfil-page {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3%;
+        width: 94%;
+        margin-left: 3%;
+        margin-top: 2%;
+
+    }
+
+    #foto-de-perfil-page {
+        display: block;
+        flex: 0 0 28%;
+        width: 28%;
+        max-width: 28%;
+        height: auto;
+        aspect-ratio: auto;
+        object-fit: contain;
+        margin-left: 0;
+        box-sizing: border-box;
+        border: solid 3px;
+    }
+
+    #biografia-page {
+        flex: 1 1 0;
+        min-width: 0;
+        width: auto;
+        margin: 0;
+        float: none;
+        font-size: clamp(16px, 5vw, 24px);
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: left;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    /* El identificador continúa abajo, alineado con el borde izquierdo. */
+    #numerin {
+        width: auto;
+        max-width: 94%;
+        margin-left: 3%;
+        margin-top: 6%;
+        margin-bottom: 0;
+        font-size: clamp(10px, 3vw, 16px);
+        line-height: 1.15;
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+}

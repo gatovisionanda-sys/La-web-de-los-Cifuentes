@@ -7,7 +7,7 @@
         display: none !important;
       }
     </style>
-        <!-- CHATGPT: Activa el ancho real del dispositivo para que el diseno responsive funcione en moviles. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Los Cifuentes</title>
       <link rel="stylesheet" href="../../estilos/estilo.css">
@@ -23,22 +23,18 @@
         if (meloinvento && meloinvento !== "null" && meloinvento.trim() !== "") {
             document.getElementById("bienvenido").innerHTML = "Bienvenido " + meloinvento;
         } else {
-            // Si no hay nombre válido, limpiamos el elemento y aseguramos que se borre del localStorage
             document.getElementById("perfil")?.remove();
             localStorage.removeItem("tunombre");
         }
         </script>
   </head>
   <body>
-        <p class="deco">H U R F H B D S U J I F F J W</p>
+    <p class="deco">H U R F H B D S U J I F F J W</p>
     <h2 class="cabecera" id="carpetanombre">Carpeta ciudadana</h2> 
     <br>
     <div style="display:block; margin: auto; text-align: center;">
     <a href="calendario.html">
     <button class="boton">Mi calendario</button>
-    </a><br>
-    <a href="certificado.html">
-    <button class="boton">Certificado de poda digital</button>
     </a><br>
     <a href="opinion.html">
     <button class="boton">Opinión ciudadana</button>
@@ -47,23 +43,32 @@
     <button class="boton">Sus derechos</button>
     </a>
     </div>
-    <br><br>
-    <p class="deco">H U R F H B D S U J I F F J W</p>
+    <br>
+            <h2 class="cabecera">Su certificado digital</h2> 
              <section id="perfil-page">
-            <p id="nombre-de-perfil-page">Tu nombre</p>
-            <button class="boton" style="display:block; margin: auto; margin-bottom: 0px;" onclick="camnombre()">✎ Editar nombre</button>
+              <p id="nombre-de-perfil-page">Tu nombre</p>
+
+              <div id="contenido-perfil-page">
+                  <img id="foto-de-perfil-page" src="../../recursos/fotos-de-perfil/editar.png">
+
+                  <p id="biografia-page">Pon tu biografia</p>
+              </div>
+              <p id="numerin" style="display: none;"></p>
+            </section>
             <br>
-            <img id="foto-de-perfil-page" src="../../recursos/fotos-de-perfil/editar.png">
-          </section>
-<br>
+            <button class="boton" style="display:block; margin: auto; margin-bottom: 0px;" onclick="camnombre()">Cambiar nombre</button>
+            <button class="boton" style="display:block; margin: auto; margin-bottom: 0px;" onclick="cambio()">Editar biografía</button>
             <div class="botones-perfil">
-            <h2 class="eslogan">Cambiar foto de perfil</h2>
-            <button style="font-size: 40px;" class="boton" onclick="restar()">⬅</button>
-            <button style="font-size: 40px;" class="boton" onclick="sumar()">➡</button>
+            <h2 class="eslogan" style="width:90%;">Cambiar foto de perfil</h2>
+            <button style="font-size: 40px;" class="boton" onclick="restar()"><-</button>
+            <button style="font-size: 40px;" class="boton" onclick="sumar()">-></button>
             <br><br>
             <button style="font-size: 23px;" class="boton" onclick="fotourl()">Con URL</button>
             </div>
-
+            <br>
+            <button class="boton" id="downloads1" onclick="descargarDNI()" style="display:none; margin:auto; text-align:center; color:lime;">>> DESCARGAR CERTIFICADO <<</button>
+            <br>
+            <p class="deco">H U R F H B D S U J I F F J W</p>
       <script src="../../scripts/excelentisimoadmin.js"></script>
       <script>
             if (localStorage.getItem("tufoto"))
@@ -80,6 +85,11 @@
             if (localStorage.getItem("tunombre"))
             {
             document.getElementById("nombre-de-perfil-page").innerHTML = localStorage.getItem("tunombre");
+            clasificarNumerin();
+            }
+            if (localStorage.getItem("biografia"))
+            {
+            document.getElementById("biografia-page").innerHTML = localStorage.getItem("biografia");
             }
       </script>
 
@@ -99,6 +109,11 @@
           else
           {
           document.getElementById("carpetanombre").innerHTML = "Bienvenido a su carpeta, <span style='color: green;'>" + meloinvento + "<span>";
+          }
+          if (localStorage.getItem("biografia"))
+          {
+          document.getElementById("downloads1").style.display = "block";
+          document.getElementById("numerin").style.removeProperty("display");
           }
         }
       </script>
