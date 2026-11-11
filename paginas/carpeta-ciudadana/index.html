@@ -47,17 +47,17 @@
     <hr>
             <h2 class="cabecera">Su certificado digital</h2> 
              <section id="perfil-page">
-              <p id="nombre-de-perfil-page">Tu nombre</p>
+              <p id="nombre-de-perfil-page">Pon tu nombre</p>
 
               <div id="contenido-perfil-page">
-                  <img id="foto-de-perfil-page" src="../../recursos/fotos-de-perfil/editar.png">
+                  <img id="foto-de-perfil-page" src="../../recursos/fotos-de-perfil/defecto.png">
 
                   <p id="biografia-page">Pon tu biografia</p>
               </div>
               <p id="numerin" style="display: none;"></p>
             </section>
             <br>
-            <p id="aviso-dni" class="eslogan">Completa el certificado y podrás descargarlo</p>
+            <p id="aviso-dni" class="eslogan">Completa el certificado y podrás descargarlo<br>(pon nombre, foto y biografia)</p>
             <button class="boton" id="downloads1" onclick="descargarDNI()" style="display:none; margin:auto; text-align:center; color:lime;">>> DESCARGAR CERTIFICADO <<</button>
             <br>
             <button class="boton" style="display:block; margin: auto; margin-bottom: 0px;" onclick="camnombre()">Cambiar nombre</button>
@@ -116,9 +116,12 @@
           }
           if (localStorage.getItem("biografia"))
           {
-          document.getElementById("downloads1").style.display = "block";
-          document.getElementById("aviso-dni").style.display = "none";
-          document.getElementById("numerin").style.removeProperty("display");
+            if (localStorage.getItem("fotopuesta"))
+            {
+            document.getElementById("downloads1").style.display = "block";
+            document.getElementById("aviso-dni").style.display = "none";
+            document.getElementById("numerin").style.removeProperty("display");
+            }
           }
         }
       </script>

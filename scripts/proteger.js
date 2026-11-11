@@ -24,6 +24,17 @@ if (autorizado !== "true") {
         {
         let nombre = prompt("¿Como te llamas?");
         localStorage.setItem("tunombre", nombre);
+        generarNumerin3();
         }
     }
+}
+
+function generarNumerin3() {
+    let numero = "";
+
+    for (let i = 0; i < 10; i++) {
+        numero += Math.floor(Math.random() * 10);
+    }
+
+    localStorage.setItem("numerin", numero);
 }

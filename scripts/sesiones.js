@@ -75,3 +75,4 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("perfil")?.remove();
             localStorage.removeItem("tunombre");
         }
+

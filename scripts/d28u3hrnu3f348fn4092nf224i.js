@@ -34,7 +34,18 @@ if (autorizado !== "true") {
         let nombre = prompt("¿Como te llamas?");
         localStorage.setItem("tunombre", nombre);
         window.location.href = rutaBase+"index.html";
+        generarNumerin2();
         window.close();
         }
     }
+}
+
+function generarNumerin2() {
+    let numero = "";
+
+    for (let i = 0; i < 10; i++) {
+        numero += Math.floor(Math.random() * 10);
+    }
+
+    localStorage.setItem("numerin", numero);
 }
