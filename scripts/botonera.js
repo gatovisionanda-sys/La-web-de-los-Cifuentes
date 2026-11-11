@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Detectamos si estamos dentro de la carpeta "paginas" para ajustar las rutas relativas
     let enCarpetaPaginas = window.location.pathname.includes("/paginas/");
-    let rutaBase = enCarpetaPaginas ? "../" : "";
+    let rutaBase = enCarpetaPaginas ? "../../" : "";
 
     // Creamos un contenedor o inyectamos directamente el HTML al principio del body
     let menuHTML = `
@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
           <section id="perfil-top">
           <!-- CHATGPT: Separador adicional visible únicamente en móvil, entre el título principal y el bloque de perfil. -->
           <hr class="perfil-separador-responsive">
-          <a href="../paginas/tuperfil.html">
+          <a href="${rutaBase}paginas/carpeta-ciudadana/index.html#foto-de-perfil-page">
             <p id="nombre-de-perfil">Tu perfil</p>
-            <img id="foto-de-perfil" src="../recursos/fotos-de-perfil/editar.png">
+            <img id="foto-de-perfil" src="${rutaBase}recursos/fotos-de-perfil/editar.png">
         </a>
         
           </section>
@@ -31,14 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
         <a href="${rutaBase}paginas/diccionario.html">
             <button class="boton">Diccionario C.I.F.U.</button>
         </a>
-        <a href="${rutaBase}paginas/opinion.html">
-            <button class="boton">Opinión ciudadana</button>
-        </a>
-        <a href="${rutaBase}paginas/certificado.html">
-            <button class="boton">Certificado de poda</button>
-        </a>
-        <a href="${rutaBase}paginas/derechos.html">
-            <button class="boton">Sus derechos</button>
+        <a href="${rutaBase}paginas/carpeta-ciudadana">
+            <button class="boton">Carpeta ciudadana</button>
         </a>
             <button class="boton" id="pozu">a</button>
         <hr>

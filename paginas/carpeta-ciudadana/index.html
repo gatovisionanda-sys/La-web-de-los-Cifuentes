@@ -2,14 +2,21 @@
 <html lang="es">
 <html>
   <head>
+        <style>
+      #perfil-top {
+        display: none !important;
+      }
+    </style>
         <!-- CHATGPT: Activa el ancho real del dispositivo para que el diseno responsive funcione en moviles. -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Los Cifuentes</title>
-      <link rel="stylesheet" href="../estilos/estilo.css">
-      <link rel="icon" type="image/png" href="../favicon.png">
-      <script src="../scripts/proteger.js"></script>
+      <link rel="stylesheet" href="../../estilos/estilo.css">
+      <link rel="icon" type="image/png" href="../../favicon.png">
+      <script src="../../scripts/proteger.js"></script>
         <meta charset="UTF-8">
-    <script src="../recursos/fotosdeperfiles.js"></script>
+    <script src="../../recursos/fotosdeperfiles.js"></script>
+          <script src="../../scripts/botonera.js"></script>
+          <script src="../../scripts/sesiones.js"></script>
           <script>
         let meloinvento = localStorage.getItem("tunombre");
 
@@ -23,28 +30,41 @@
         </script>
   </head>
   <body>
-    <h1>Perfil de usuario</h1>
-        <a href="../index.html">
-            <button class="boton">Guardar y volver a inicio</button>
-        </a>
-    <hr>
-    
+        <p class="deco">H U R F H B D S U J I F F J W</p>
+    <h2 class="cabecera" id="carpetanombre">Carpeta ciudadana</h2> 
+    <br>
+    <div style="display:block; margin: auto; text-align: center;">
+    <a href="calendario.html">
+    <button class="boton">Mi calendario</button>
+    </a><br>
+    <a href="certificado.html">
+    <button class="boton">Certificado de poda digital</button>
+    </a><br>
+    <a href="opinion.html">
+    <button class="boton">Opinión ciudadana</button>
+    </a><br>
+    <a href="derechos.html">
+    <button class="boton">Sus derechos</button>
+    </a>
+    </div>
+    <br><br>
+    <p class="deco">H U R F H B D S U J I F F J W</p>
              <section id="perfil-page">
             <p id="nombre-de-perfil-page">Tu nombre</p>
             <button class="boton" style="display:block; margin: auto; margin-bottom: 0px;" onclick="camnombre()">Editar nombre</button>
             <br>
-            <img id="foto-de-perfil-page" src="../recursos/fotos-de-perfil/editar.png">
+            <img id="foto-de-perfil-page" src="../../recursos/fotos-de-perfil/editar.png">
           </section>
 <br>
             <div class="botones-perfil">
-            <h2 class="eslogan">Cambiar foto</h2>
+            <h2 class="eslogan">Cambiar foto de perfil</h2>
             <button style="font-size: 40px;" class="boton" onclick="restar()">⬅</button>
             <button style="font-size: 40px;" class="boton" onclick="sumar()">➡</button>
             <br><br>
             <button style="font-size: 23px;" class="boton" onclick="fotourl()">Con URL</button>
             </div>
 
-      <script src="../scripts/excelentisimoadmin.js"></script>
+      <script src="../../scripts/excelentisimoadmin.js"></script>
       <script>
             if (localStorage.getItem("tufoto"))
             {
@@ -61,6 +81,26 @@
             {
             document.getElementById("nombre-de-perfil-page").innerHTML = localStorage.getItem("tunombre");
             }
+      </script>
+
+      <script>
+        window.addEventListener('load', function() {
+          const elemento = document.getElementById('perfil-top');
+          if (elemento) {
+            elemento.remove();
+          }
+        });
+        if (localStorage.getItem("tunombre"))
+        {
+          if (localStorage.getItem("excelentisimo"))
+          {
+          document.getElementById("carpetanombre").innerHTML = "Bienvenido a su carpeta, <span style='color: rgb(207, 107, 238);'>" + meloinvento + "<span>";
+          }
+          else
+          {
+          document.getElementById("carpetanombre").innerHTML = "Bienvenido a su carpeta, <span style='color: green;'>" + meloinvento + "<span>";
+          }
+        }
       </script>
 
   </body>

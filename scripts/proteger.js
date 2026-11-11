@@ -1,5 +1,5 @@
 let autorizado = localStorage.getItem("sesion_iniciada");
-
+let rutaBase1 = "../../";
 clave="zamarrete123";
 
 if (autorizado !== "true") {
@@ -8,7 +8,7 @@ if (autorizado !== "true") {
     while (contra !== clave) {
         if (contra === null) {
             window.close();
-            window.location.href = "../index.html";
+            window.location.href = rutaBase1+"index.html";
             break;
         }
         contra = prompt("Contraseña incorrecta ZAMARRO. Inténtalo de nuevo:");

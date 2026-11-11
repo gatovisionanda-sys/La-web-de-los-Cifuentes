@@ -13,9 +13,13 @@ html
 {
     font-family: "Orbitron", sans-serif;
     color: white;
-    font-size: 22px;
+    font-size: 40px;
     font-weight: 600;
     background-color: rgb(4, 23, 51);
+}
+#marquesina:hover
+{
+    background-color: #5297ff;
 }
 h1
 {
@@ -142,7 +146,7 @@ input[type="text"]
     margin: 0 auto;
     display: block;
 }
-.video
+.video, #calendario
 {
     border: solid 5px #26426d;
     border-radius: 30px;
@@ -165,8 +169,8 @@ font-family: "Yarndings 12", system-ui;
     border: solid 10px #3b2205;
     margin: 0 auto;
     display: block;
-    width: 85%;
-    height: 700px;
+    width: 50%;
+    height: 760px;
     background-color: rgb(231, 217, 199);
 }
 #topsecret:hover
@@ -357,14 +361,27 @@ display: none;
         direction: ltr;
         text-align: center;
     }
-    #marquesina { font-size: clamp(0.78rem, 3.2vw, 1rem); }
-    #webver { font-size: 0.8rem; overflow-wrap: anywhere; }
+    #marquesina
+    {
+        font-size: clamp(1.5rem, 4.2vw, 2rem);
+    }
+    #webver { font-size: 1rem; text-align: center; overflow-wrap: anywhere; }
 
     /* CHATGPT: Conserva la proporción del reproductor y lo limita al ancho disponible. */
     .video {
         display: block;
         width: min(100%, 560px);
         height: min(calc(56.25vw - 13.5px), 315px);
+        min-height: 160px;
+        margin: 0 auto;
+        border-width: 3px;
+        border-radius: 18px;
+    }
+    #calendario
+    {
+        border: solid 5px #26426d;
+        display: block;
+        width: min(100%, 560px);
         min-height: 160px;
         margin: 0 auto;
         border-width: 3px;
@@ -394,7 +411,8 @@ display: none;
         float: none !important;
         width: 100% !important;
         height: 52vh !important;
-        min-height: 320px;
+        min-height: 500px;
+        max-height: 700px;
         max-width: 100%;
         border: 0;
     }
@@ -472,7 +490,8 @@ display: none;
         aspect-ratio: 1 / 1;
         object-fit: cover;
     }
-    #textadmin { float: none; text-align: center; font-size: 1rem; }
+    #textadmin { display: none !important; }
+    .botonadmin { font-size: clamp(0.3rem, 3vw, 0.75rem);}
     #adminpanel { max-width: 100%; overflow-wrap: anywhere; }
     .botones-perfil { max-width: 100%; }
     .botones-perfil .eslogan { width: 100%; }

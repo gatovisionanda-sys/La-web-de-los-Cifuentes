@@ -43,17 +43,17 @@ function restar() {
 }
 
 if (localStorage.getItem("tufoto") == 1) {
-    localStorage.setItem("fotopuesta", "../recursos/fotos-de-perfil/alerta.png");
+    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/alerta.png");
 }
 if (localStorage.getItem("tufoto") == 2) {
-    localStorage.setItem("fotopuesta", "../recursos/fotos-de-perfil/bingus.png");
+    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/bingus.png");
 }
 if (localStorage.getItem("tufoto") == 3) {
-    localStorage.setItem("fotopuesta", "../recursos/fotos-de-perfil/ataqueferro.png");
+    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/ataqueferro.png");
 }
 if (localStorage.getItem("tufoto") == 4) {
-    localStorage.setItem("fotopuesta", "../recursos/fotos-de-perfil/negrete.gif");
+    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/negrete.gif");
 }
 if (localStorage.getItem("tufoto") == 5) {
-    localStorage.setItem("fotopuesta", "../recursos/fotos-de-perfil/perrete.gif");
+    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/perrete.gif");
 }

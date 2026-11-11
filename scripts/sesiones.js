@@ -1,12 +1,12 @@
 let sesion = localStorage.getItem("sesion_iniciada");
-
+let rutaBase = "../../";
 function cerrarSesion()
 {
     let respuesta = confirm("¿Estás seguro del to del to?");
 
     if (respuesta)
     {
-        window.location.href = "../index.html";
+        window.location.href = rutaBase+"index.html";
         localStorage.removeItem("sesion_iniciada");
         localStorage.removeItem("excelentisimo");
     }
@@ -18,7 +18,7 @@ if (!localStorage.getItem("tunombre") || localStorage.getItem("tunombre") === "n
 
 function iniciarDesdePagina()
 {
-    window.location.href = "paginas/dfjknhyu8u45i3rokef904u93i4oefuhu19i04o32ru3uf9i2o3uqthu43jiru1h839u2oithug34q92i2t4ini1o9u4t.html";
+    window.location.href = rutaBase+"paginas/dfjknhyu8u45i3rokef904u93i4oefuhu19i04o32ru3uf9i2o3uqthu43jiru1h839u2oithug34q92i2t4ini1o9u4t.html";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -63,8 +63,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let meloinvento = localStorage.getItem("tunombre");
 
-        if (meloinvento && meloinvento !== "null" && meloinvento.trim() !== "") {
-            document.getElementById("bienvenido").innerHTML = "Bienvenido " + meloinvento;
+        if (meloinvento && meloinvento !== "null" && meloinvento.trim() !== "")
+        {
+            console.log("hay nombre")
         } else {
             // Si no hay nombre válido, limpiamos el elemento y aseguramos que se borre del localStorage
             document.getElementById("perfil")?.remove();

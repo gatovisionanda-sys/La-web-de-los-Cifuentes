@@ -1,5 +1,4 @@
 let autorizado = localStorage.getItem("sesion_iniciada");
-
 let clave = "zamarrete123";
 let admin = "ferreteadmin";
 
@@ -10,12 +9,12 @@ if (autorizado !== "true") {
         if (contra === admin) {
             localStorage.setItem("excelentisimo", "true");
             localStorage.setItem("sesion_iniciada", "true");
-            window.location.href = "../index.html";
+            window.location.href = rutaBase+"index.html";
             window.close();
             break;
         }
         if (contra === null) {
-            window.location.href = "../index.html";
+            window.location.href = rutaBase+"index.html";
             window.close();
             break;
         }
@@ -27,14 +26,14 @@ if (autorizado !== "true") {
         localStorage.setItem("sesion_iniciada", "true");
         if (localStorage.getItem("tunombre"))
         {
-        window.location.href = "../index.html";
+        window.location.href = rutaBase+"index.html";
         window.close();
         }
         else
         {
         let nombre = prompt("¿Como te llamas?");
         localStorage.setItem("tunombre", nombre);
-        window.location.href = "../index.html";
+        window.location.href = rutaBase+"index.html";
         window.close();
         }
     }

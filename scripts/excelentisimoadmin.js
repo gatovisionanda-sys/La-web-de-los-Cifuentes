@@ -9,12 +9,13 @@ if (localStorage.getItem("excelentisimo") === "true")
     let menuADMIN = `
         <hr>
         <div id="adminpanel">
-            <a href="${rutaBase}index.html#criticando">
-                <button  class="botonadmin">Borrarlo to</button>
-            </a>
             <a href="${rutaBase}paginas/partido.html">
                 <button class="botonadmin">Administrar</button>
             </a>
+            <a href="${rutaBase}index.html#criticando">
+                <button class="botonadmin">Tirar bomba que explota to</button>
+            </a>
+                <button class="botonadmin" onclick="adminout()">Salir del admin</button>
         <p id="textadmin">Panel admin</p>
         </div>
         <hr>
@@ -28,4 +29,13 @@ if (localStorage.getItem("excelentisimo") === "true")
 if (localStorage.getItem("excelentisimo") === "true")
 {
     document.getElementById("webver").innerHTML = "webZamarros (ADMIN)";
+}
+function adminout()
+{
+    let confsalir = confirm("¿Está usted seguro mi excelentísimo?")
+    if (confsalir)
+    {
+    localStorage.removeItem("excelentisimo");
+    location.reload();
+    }
 }
