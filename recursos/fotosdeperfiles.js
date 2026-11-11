@@ -115,37 +115,12 @@ async function descargarDNI() {
     const dni = document.getElementById("perfil-page");
 
     const canvas = await html2canvas(dni, {
-
         scale: 2,
         useCORS: true,
-        backgroundColor: null,
-
-        windowWidth: 1440,
-        windowHeight: 1200,
-
-        width: 850,
-
-        onclone: function(documento) {
-
-            const perfil = documento.getElementById("perfil-page");
-            const nombre = documento.getElementById("nombre-de-perfil-page");
-
-            perfil.style.width = "850px";
-            perfil.style.minWidth = "850px";
-            perfil.style.maxWidth = "850px";
-            perfil.style.boxSizing = "border-box";
-
-            // Recuperar el diseño original del nombre
-            nombre.style.fontSize = "50px";
-            nombre.style.marginLeft = "5%";
-            nombre.style.marginTop = "4%";
-
-        }
+        backgroundColor: null
     });
 
     canvas.toBlob(function(blob) {
-
-        if (!blob) return;
 
         const enlace = document.createElement("a");
 
@@ -156,8 +131,7 @@ async function descargarDNI() {
 
         URL.revokeObjectURL(enlace.href);
 
-    }, "image/png");
-
+    }, "image/png", 0.95);
 }
 
 
