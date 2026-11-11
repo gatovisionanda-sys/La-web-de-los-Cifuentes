@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
       <div>
         <h1>LOS CIFUENTES
           <section id="perfil-top">
-          <!-- CHATGPT: Separador adicional visible únicamente en móvil, entre el título principal y el bloque de perfil. -->
           <hr class="perfil-separador-responsive">
           <a href="${rutaBase}paginas/carpeta-ciudadana/index.html#foto-de-perfil-page">
             <p id="nombre-de-perfil">Tu perfil</p>
@@ -19,21 +18,27 @@ document.addEventListener("DOMContentLoaded", function() {
           </section>
         </h1>
 
+
+        <button class="boton" id="boton-menu" onclick="ocultar()">☰</button>
+
         <a href="${rutaBase}index.html">
-            <button class="boton">Inicio</button>
+            <button class="boton">🏠︎ Inicio</button>
         </a>
+        
+        <span id="menu-opt">
         <a href="${rutaBase}index.html#criticando">
-            <button class="boton" style="color:rgb(255, 0, 0)">Himno 24/7 ⦿</button>
+            <button class="boton" style="color:rgb(255, 0, 0)">⦿ Himno 24/7</button>
         </a>
         <a href="${rutaBase}paginas/partido.html">
-            <button class="boton" style="color:rgb(255, 188, 19)">Registrar Partido</button>
+            <button class="boton" style="color:rgb(255, 188, 19)">✎ Registrar Partido</button>
         </a>
         <a href="${rutaBase}paginas/diccionario.html">
-            <button class="boton">Diccionario C.I.F.U.</button>
+            <button class="boton">🕮 Diccionario C.I.F.U.</button>
         </a>
         <a href="${rutaBase}paginas/carpeta-ciudadana">
-            <button class="boton">Carpeta ciudadana</button>
+            <button class="boton">🗁 Carpeta ciudadana</button>
         </a>
+        </span>
             <button class="boton" id="pozu">a</button>
         <hr>
     </div>
@@ -48,12 +53,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (zamarrete) {
         if (putita === "true") {
-            zamarrete.innerHTML = "Cerrar sesión";
+            zamarrete.innerHTML = "⏻ Cerrar sesión";
             zamarrete.onclick = cerrarSesion;
         } else {
-            zamarrete.innerHTML = "Iniciar sesion";
+            zamarrete.innerHTML = "⏻ Iniciar sesion";
             zamarrete.onclick = iniciarDesdePagina;
             zamarrete.style.color = "lime";
         }
     }
 });
+
+localStorage.setItem("menu", "ocultar");
+
+function ocultar() {
+    let ver = localStorage.getItem("menu");
+    // Use .bind(localStorage) to preserve the correct 'this' context
+    let cam = localStorage.setItem.bind(localStorage);
+
+    if (ver === "ocultar") {
+        document.getElementById("menu-opt").style.display = "inline";
+        document.getElementById("boton-menu").innerHTML = "✖";
+        cam("menu", "mostrar");
+    } else if (ver === "mostrar") {
+        document.getElementById("menu-opt").style.display = "none";
+        document.getElementById("boton-menu").innerHTML = "☰";
+        cam("menu", "ocultar");
+    }
+}
