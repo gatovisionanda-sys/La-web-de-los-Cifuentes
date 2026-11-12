@@ -64,6 +64,7 @@
             <button class="boton" style="display:block; margin: auto; margin-bottom: 0px;" onclick="cambio()">Editar biografía</button>
             <div class="botones-perfil">
             <h2 class="eslogan" style="width:90%;">Cambiar foto de perfil</h2>
+            <p class="eslogan" id="mostrar-tufoto"></p>
             <button style="font-size: 40px;" class="boton" onclick="restar()"><-</button>
             <button style="font-size: 40px;" class="boton" onclick="sumar()">-></button>
             <br><br>
@@ -123,6 +124,13 @@
             }
           }
         }
+      </script>
+
+      <script>
+        if(localStorage.getItem("tufoto"))
+      {
+        document.getElementById("mostrar-tufoto").innerHTML = localStorage.getItem("tufoto") + "/" + tope;
+      }
       </script>
 
   </body>

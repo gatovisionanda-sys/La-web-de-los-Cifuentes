@@ -1,7 +1,9 @@
 // Si ya hay un número guardado, úsalo; si no, empieza en 1
-let seleco = Number(localStorage.getItem("tufoto")) || 1;
+let seleco = Number(localStorage.getItem("tufoto")) || 0;
 // NUMERO DE FOTOS DISPONIBLES:
 const tope = 7;
+
+
 
 function camnombre ()
 {
@@ -88,10 +90,10 @@ function clasificarNumerin() {
 }
 
 if (localStorage.getItem("tufoto") == 1) {
-    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/alerta.png");
+    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/bingus.png");
 }
 if (localStorage.getItem("tufoto") == 2) {
-    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/bingus.png");
+    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/alerta.png");
 }
 if (localStorage.getItem("tufoto") == 3) {
     localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/ataqueferro.png");
@@ -139,6 +141,8 @@ async function descargarDNI() {
 
     }, "image/png", 0.95);
 }
+
+
 
 
 
