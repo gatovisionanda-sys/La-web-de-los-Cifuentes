@@ -34,8 +34,6 @@ if (autorizado !== "true") {
         {
         novato();
         generarNumerin2();
-        window.location.href = rutaBase+"index.html";
-        window.close();
         }
     }
 }
@@ -59,8 +57,12 @@ function novato()
             let insistelepaqui = confirm("Neeeene que aun no sabemos tu nombre, hazte el certificao digitaaal.")
                 if (insistelepaqui)
                 {
-                location.href = "../../paginas/carpeta-ciudadana/index.html#perfil-page"
+                location.href = "../paginas/carpeta-ciudadana/index.html#perfil-page"
                 }
+                else
+                    {
+                    location.href = "../index.html"
+                    }
         }
     }
     else
@@ -71,5 +73,9 @@ function novato()
         {
         location.href = "../../paginas/carpeta-ciudadana/index.html#perfil-page"
         }
+        else
+            {
+            location.href = "../index.html"
+            }
     }
 }
