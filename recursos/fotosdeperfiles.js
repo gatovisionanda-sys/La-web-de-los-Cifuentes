@@ -105,10 +105,10 @@ if (localStorage.getItem("tufoto") == 5) {
     localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/perrete.gif");
 }
 if (localStorage.getItem("tufoto") == 6) {
-    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/yakito.jpg");
+    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/yakito.png");
 }
 if (localStorage.getItem("tufoto") == 7) {
-    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/ferrodormio.jpg");
+    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/ferrodormio.png");
 }
 
 

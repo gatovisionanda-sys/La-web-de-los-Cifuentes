@@ -3,7 +3,7 @@ let rutaBase1 = "../../";
 clave="zamarrete123";
 
 if (autorizado !== "true") {
-    let contra = prompt("Muchacho tamien pon la contraseña:");
+    let contra = prompt("Pero zamarruzo, que pa entrar aqui tienes que poner la CONTRASEÑA:");
 
     while (contra !== clave) {
         if (contra === null) {
@@ -18,12 +18,11 @@ if (autorizado !== "true") {
         localStorage.setItem("sesion_iniciada", "true");
         if (localStorage.getItem("tunombre"))
         {
-            console.log("yata")
+            console.log("ya ta inisiao achoo")
         }
         else
         {
-        let nombre = prompt("¿Como te llamas?");
-        localStorage.setItem("tunombre", nombre);
+        novato2();
         generarNumerin3();
         }
     }
@@ -37,4 +36,28 @@ function generarNumerin3() {
     }
 
     localStorage.setItem("numerin", numero);
+}
+
+function novato2()
+{
+    if (localStorage.getItem("novato"))
+    {
+        if (!localStorage.getItem("tunombre"))
+        {
+            let insistelepaqui = confirm("Neeeene que aun no sabemos como te llamas, dinoslooo.")
+                if (insistelepaqui)
+                {
+                location.href = "../../paginas/carpeta-ciudadana/index.html#perfil-page"
+                }
+        }
+    }
+    else
+    {
+        let tutorial = confirm("Me paece que eres nuevo ¿Quieres hacer tu certificao digital? (O puedes hacerlo luego tocando en tu perfil)")
+        localStorage.setItem("novato" , "ya no");
+        if (tutorial)
+        {
+        location.href = "../../paginas/carpeta-ciudadana/index.html#perfil-page"
+        }
+    }
 }
