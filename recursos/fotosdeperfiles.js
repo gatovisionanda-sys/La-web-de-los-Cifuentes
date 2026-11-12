@@ -1,7 +1,7 @@
 // Si ya hay un número guardado, úsalo; si no, empieza en 1
 let seleco = Number(localStorage.getItem("tufoto")) || 1;
 // NUMERO DE FOTOS DISPONIBLES:
-const tope = 5;
+const tope = 7;
 
 function camnombre ()
 {
@@ -101,6 +101,12 @@ if (localStorage.getItem("tufoto") == 4) {
 }
 if (localStorage.getItem("tufoto") == 5) {
     localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/perrete.gif");
+}
+if (localStorage.getItem("tufoto") == 6) {
+    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/yakito.jpg");
+}
+if (localStorage.getItem("tufoto") == 7) {
+    localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/ferrodormio.jpg");
 }
 
 
