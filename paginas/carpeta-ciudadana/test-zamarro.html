@@ -8,9 +8,17 @@
       <link rel="stylesheet" href="../../estilos/estilo.css">
       <link rel="icon" type="image/png" href="../../favicon.png">
       <script src="../../scripts/proteger.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
               <script src="../../scripts/sesiones.js"></script>
               <script src="test-zamarro.js"></script>
       <meta charset="UTF-8">
+      <script>
+      if (!localStorage.getItem("tunombre"))
+      {
+        alert("Pa hacer el test, completa primero tu certificao digital con tu nombre, después vuelve a entrar aquí.")
+        window.location.href = "index.html#perfil-page";
+      }
+      </script>
   </head>
   <body>
       <div>
@@ -33,9 +41,15 @@
 <!-- SECCION DEL FORMULARIO -->
 
 <section id="test-zamarro">
+<span id="ocul-info">
 <h2 class="cabecera">Test del zamarro</h2>
-<p class="eslogan">Haz este test para descubrir tu especto zamarral</p>
-<form name="zamatest" id="zamatest" onsubmit='return confirzamarro();'>
+<p class="eslogan">Haz este test para descubrir tu especto zamarral.<br><br>En cada pregunta se te planteará una afirmación o una situación, tu tienes que decir si estas mu de acuerdo con la afirmación (mu bien), o si no estás nada de acuerdo (mu mal) basándote en tu experiencia personal y en la TOTAL SINCERIDAD porque estamos de guasa y no pasa na si eres zamarro.<br><br>Si eres neutral sobre una pregunta, entonces selecciona "medaigual" (o si eres un sosainas que no se quiere mojar)<br><br>Al terminar recibirás tu resultado y diagnóstico, el cual podrás descargar.</p>
+<button class="boton-centro" onclick='document.getElementById("ocul-info").style.display = "none"; document.getElementById("zamatest").style.display = "";'>Comenzar test</button>
+</span>
+<br>
+<form name="zamatest" id="zamatest" onsubmit='return confirzamarro();' style="display: block !important;">
+    <p class="definicion">Antes de comenzar<br>Como de zamarro te consideras tú (del 0 al 100)</p>
+    <input type="number" min="0" max="100" step="1" id="mi-numero" name="percep" required>
     <p class="definicion">Pregunta 1<br>Cuando algo sale mal, por h o por b la culpa es de los demás, jamás es tuya porque lo haces to bien.</p>
     <select name="pr1" id="pr1" required>
         <option value ="" selected disabled>Que te parece</option>
@@ -195,16 +209,20 @@
 <section id="resul-zamarro" style="display: none !important;">
     <h2 class="cabecera">Resultados test del zamarro</h2>
     <div id="tarjeta-zamarro">
-    <p class="cabeceraizq" id="mi-porcentaje">Usted es 100% zamarro</p>
-    <p class="cabeceraizq" id="mi-analisis">Premio gordo:<br><span class="definicion">Yo soy aquella activista del movimiento social, que paraba los desahucios a nivel municipal</span></p>
+    <p class="cabeceraizq" id="mi-porcentaje">Resultado porcentaje</p>
+    <p class="definicion" id="mi-comparativa">Te autopercibias un <span id="auto-per"></span> zamarro de lo que en verdad eres.</p>
+    <p class="cabeceraizq" id="mi-analisis">El premio<br><span class="definicion">Tu diagnostico</span></p>
     </div>
     <br>
-    <button style="text-align: center; display: block; margin: auto;" class="boton" onclick='
+    <button style="color:lime; padding: 1%;" class="boton-centro" onclick="descargarZamaTest();">DESCARGAR</button>
+    <br>
+    <button class="boton-centro" onclick='
     let borrarlo = confirm("¿Seguro que quieres empezar de cero?")
     
     if (borrarlo)
     {
         localStorage.removeItem("Zamarreza");
+        localStorage.removeItem("autoperce");
         location.reload();
     }
     '>Hacer el test de cero</button>
@@ -218,6 +236,22 @@
                 document.getElementById("resul-zamarro").style.display = "";
                 mostrarResultado();
             }
+        </script>
+
+        <script>
+        let autoperce = Number(localStorage.getItem("autoperce"));
+
+        let zamarreza = Number(localStorage.getItem("Zamarreza"));
+
+        let comparaZam = autoperce - zamarreza;
+
+        localStorage.setItem("comparaZam", comparaZam);
+
+        let autoPer = document.getElementById("auto-per");
+
+        autoPer.innerHTML = Math.abs(comparaZam) + (comparaZam < 0 ? "% menos" : "% más");
+
+        autoPer.style.color = comparaZam < 0 ? "red" : "green";
         </script>
   </body>
 

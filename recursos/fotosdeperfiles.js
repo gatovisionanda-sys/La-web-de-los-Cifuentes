@@ -84,8 +84,16 @@ function clasificarNumerin() {
         resultado = "-INJE";
     }
 
+    if (localStorage.getItem("Zamarreza"))
+    {
     document.getElementById("numerin").innerHTML =
-        localStorage.getItem("numerin") + resultado;
+    localStorage.getItem("numerin") + resultado + " (" + localStorage.getItem("Zamarreza") + "% Zamarro)";
+    }
+    else
+    {
+    document.getElementById("numerin").innerHTML =
+    localStorage.getItem("numerin") + resultado;
+    }
 }
 
 if (localStorage.getItem("tufoto") == 1) {

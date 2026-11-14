@@ -1,11 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    for (let i = 1; i <= 20; i++) {
-        document.getElementById("pr" + i).required = false;
-    }
-});
-
-// ELIMINAR LUEGO
-
 function confirzamarro() {
     if (confirm("¿Ya lo quieres enviar neeeene?")) {
         enviarzamarro();
@@ -16,30 +8,17 @@ function confirzamarro() {
 }
 
 function enviarzamarro() {
+    let autoperce = document.querySelector('[name="percep"]').value;
+    localStorage.setItem("autoperce", autoperce);
+
     let total = 0;
     let maximo = 0;
-    const pregun = 15; // NUMERO DE PREGUNTAS
+    const pregun = 15;
 
-    // PESO DE CADA PREGUNTA
     const pesos = [
-        3.5,  // Pregunta 1
-        1,    // Pregunta 2
-        2,    // Pregunta 3
-        2.5,  // Pregunta 4
-        1,    // Pregunta 5
-        3,    // Pregunta 6
-        2.5,  // Pregunta 7
-        2,    // Pregunta 8
-        0.5,  // Pregunta 9
-        1.25, // Pregunta 10
-        1,    // Pregunta 11
-        1.5,  // Pregunta 12
-        3.5,  // Pregunta 13
-        0.25, // Pregunta 14
-        3     // Pregunta 15
+        3.5, 1, 2, 2.5, 1, 3, 2.5, 2, 0.5, 1.25, 1, 1.5, 3.5, 0.25, 3
     ];
 
-    // PREGUNTAS CON PUNTUACION INVERTIDA
     const invertidas = [8, 11];
 
     for (let i = 1; i <= pregun; i++) {
@@ -54,16 +33,18 @@ function enviarzamarro() {
     }
 
     let porcentaje = parseInt((total / maximo) * 100);
-    if (porcentaje < 0)
-    {
+
+    if (porcentaje < 0) {
         porcentaje = 0;
     }
-        if (porcentaje > 95)
-    {
+
+    if (porcentaje > 95) {
         porcentaje = 100;
     }
+
     console.log("Tu puntuación es: " + porcentaje + "%");
-    localStorage.setItem("Zamarreza" , porcentaje);
+
+    localStorage.setItem("Zamarreza", porcentaje);
 }
 
 function mostrarResultado()
@@ -71,7 +52,7 @@ function mostrarResultado()
     let zamarreza = localStorage.getItem("Zamarreza");
     let nombre = localStorage.getItem("tunombre");
     let analisis = document.getElementById("mi-analisis");
-    document.getElementById("mi-porcentaje").innerHTML = '<span style="color:hotpink;">' + nombre + '</span> usted es ' + '<span id="porcencolor">' + zamarreza + '%</span> zamarro';
+    document.getElementById("mi-porcentaje").innerHTML = '<span style="color: rgb(206, 49, 127);">' + nombre + '</span> usted es ' + '<span id="porcencolor">' + zamarreza + '%</span> zamarro';
 
     if (zamarreza < 5)
     {
@@ -131,6 +112,30 @@ function mostrarResultado()
     if (zamarreza > 99)
     {
         document.getElementById("porcencolor").style.color = "rgb(114, 0, 0)";
-        analisis.innerHTML = 'El premio gordo<br><span class="definicion">Que barbaridad, eres la cosa más mala ka pario el mundo, probablemente le diste clase a hitler.<br>Su sangre es literalmente zamarrería pura, no hay nada más, por lo cual es probable que:<ul><li>Si te muerdes la lengua te envenenes.</li><li>Una zamarrada tuya libera tanta energía como la que consume España en un año</li><li>Eres mala hierba y por consecuente nunca mueres</li></ul></span>'
+        analisis.innerHTML = 'El premio gordo<br><span class="definicion">Que barbaridad, eres la cosa más mala ka pario el mundo, seguro que tú le diste clase a cierto alemán con bigote.<br>Su sangre es literalmente zamarrería pura, no hay nada más, por lo cual es probable que:<ul><li>Si te muerdes la lengua te envenenes.</li><li>Una zamarrada tuya libera tanta energía como la que consume España en un año</li><li>Eres mala hierba y por consecuente nunca mueres</li></ul></span>'
     }
+}
+
+async function descargarZamaTest() {
+
+    const dni = document.getElementById("tarjeta-zamarro");
+
+    const canvas = await html2canvas(dni, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: null
+    });
+
+    canvas.toBlob(function(blob) {
+
+        const enlace = document.createElement("a");
+
+        enlace.href = URL.createObjectURL(blob);
+        enlace.download = "Zamarreza de " + localStorage.getItem("tunombre") + ".png";
+
+        enlace.click();
+
+        URL.revokeObjectURL(enlace.href);
+
+    }, "image/png", 0.95);
 }
