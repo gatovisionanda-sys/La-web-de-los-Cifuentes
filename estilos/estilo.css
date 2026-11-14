@@ -329,12 +329,51 @@ font-family: "Yarndings 12", system-ui;
     border-radius: 20px;
     padding: 10px;
 }
+select
+{
+    background-color: rgb(4, 23, 51);
+    color:#b8e8ff;
+    font-family: "Isometra", serif;
+    font-weight: 100; 
+    font-style: normal;
+    font-size: 20px;
+    padding: 0.5%;
+    border-radius: 10px;
+}
+#zamatest
+{
+    padding: 1%;
+    margin: 25%;
+    border: solid;
+    margin-top:0%;
+}
 
 /* CHATGPT: El separador del perfil no altera el encabezado de escritorio. */
 .perfil-separador-responsive
 {
 display: none; 
 }
+input[type="submit"]
+{
+    background-color: rgb(4, 23, 51);
+    color:#4dff00;
+    font-family: "Isometra", serif;
+    font-weight: 100; 
+    font-style: normal;
+    font-size: 20px;
+    padding: 1%;
+    border-radius: 10px;
+}
+#tarjeta-zamarro
+{
+    border: solid;
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 3%;
+    background-color: rgb(255, 228, 254);
+}
+
 
 /* CHATGPT: Ajustes responsive generales. Solo se activan en pantallas de hasta 768 px; los estilos de escritorio originales se mantienen. */
 @media screen and (max-width: 768px) {
@@ -644,5 +683,32 @@ display: none;
         line-height: 1.15;
         text-align: left;
         overflow-wrap: anywhere;
+    }
+    #zamatest
+    {
+        padding: 2%;
+        margin: 6%;
+        border: solid 3px;
+        margin-top:0%;
+    }
+    select
+    {
+        background-color: rgb(4, 23, 51);
+        color:#b8e8ff;
+        font-family: "Isometra", serif;
+        font-weight: 100; 
+        font-style: normal;
+        font-size: 17.5px;
+        padding: 0.2%;
+        border-radius: 10px;
+    }
+    #tarjeta-zamarro
+    {
+    border: solid;
+    display: block;
+    margin-left: 1.8%;
+    margin-right: 1.8%;
+    padding: 2.2%;
+    background-color: rgb(255, 228, 254);
     }
 }

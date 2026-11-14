@@ -4,7 +4,6 @@ let seleco = Number(localStorage.getItem("tufoto")) || 0;
 const tope = 7;
 
 
-
 function camnombre ()
 {
         let nombre = prompt("¿Como te llamas?");
@@ -110,12 +109,6 @@ if (localStorage.getItem("tufoto") == 6) {
 if (localStorage.getItem("tufoto") == 7) {
     localStorage.setItem("fotopuesta", "../../recursos/fotos-de-perfil/ferrodormio.png");
 }
-
-
-
-
-
-
 
 
 async function descargarDNI() {
